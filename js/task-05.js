@@ -1,6 +1,8 @@
-const textInput = document.querySelector("#name-input");
-const output = document.querySelector("#name-output");
+const inputEl = document.querySelector("#name-input");
+const outputEl = document.querySelector("#name-output");
 
-textInput.addEventListener("input", (event) => {
-  output.textContent = event.currentTarget.value;
-});
+function onInputElInput() {
+  outputEl.textContent = inputEl.value;
+}
+
+inputEl.addEventListener("input", onInputElInput);

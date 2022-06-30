@@ -7,9 +7,9 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-function changeColor() {
+function onChangeColorBtnClick() {
   bodyEl.style.backgroundColor = getRandomHexColor();
   bgcColorText.textContent = `${bodyEl.style.backgroundColor}`;
 }
 
-changeColorBtn.addEventListener("click", changeColor);
+changeColorBtn.addEventListener("click", onChangeColorBtnClick);

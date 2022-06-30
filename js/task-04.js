@@ -2,12 +2,12 @@ const plusBtn = document.querySelector('button[data-action="increment"]');
 const minusBtn = document.querySelector('button[data-action="decrement"]');
 const counterValue = document.querySelector("#value");
 
-const plusClick = () => {
+function onPlusBtnClick() {
   counterValue.textContent = Number(counterValue.textContent) + 1;
-};
-const minusClick = () => {
+}
+function onMinusBtnClick() {
   counterValue.textContent = Number(counterValue.textContent) - 1;
-};
+}
 
-plusBtn.addEventListener("click", plusClick);
-minusBtn.addEventListener("click", minusClick);
+plusBtn.addEventListener("click", onPlusBtnClick);
+minusBtn.addEventListener("click", onMinusBtnClick);
