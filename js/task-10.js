@@ -8,6 +8,7 @@ function getRandomHexColor() {
 }
 
 function createBoxes(amount) {
+  destroyBoxes();
   numberInput.value > Number(numberInput.getAttribute("max")) ||
   numberInput.value < Number(numberInput.getAttribute("min"))
     ? alert("Тільки числа від 1 до 100 !")
@@ -26,6 +27,10 @@ function destroyBoxes() {
   boxesEl.innerHTML = "";
 }
 
-createBtn.addEventListener("click", destroyBoxes);
+function removeNumberInput() {
+  numberInput.value = "";
+}
+
 createBtn.addEventListener("click", createBoxes);
 destroyBtn.addEventListener("click", destroyBoxes);
+destroyBtn.addEventListener("click", removeNumberInput);
