@@ -5,4 +5,5 @@ function onOutputChange() {
   output.style.fontSize = `${fontSizeControl.value}px`;
 }
 
-fontSizeControl.addEventListener("change", onOutputChange);
+fontSizeControl.addEventListener("input", onOutputChange);
+addEventListener("DOMContentLoaded", onOutputChange);
