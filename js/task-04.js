@@ -1,12 +1,19 @@
+const countBlocks = document.querySelectorAll(".counter");
 const plusBtn = document.querySelector('button[data-action="increment"]');
 const minusBtn = document.querySelector('button[data-action="decrement"]');
-const counterValue = document.querySelector("#value");
+const value = document.querySelector("#value");
+let counterValue = 0;
 
 function onPlusBtnClick() {
-  counterValue.textContent = Number(counterValue.textContent) + 1;
+  updateValue((counterValue += 1));
 }
+
 function onMinusBtnClick() {
-  counterValue.textContent = Number(counterValue.textContent) - 1;
+  updateValue((counterValue -= 1));
+}
+
+function updateValue(params) {
+  value.innerHTML = params;
 }
 
 plusBtn.addEventListener("click", onPlusBtnClick);
